@@ -20,7 +20,13 @@
  *   MYSQL_PASSWORD=123456789
  *   根据自己的数据库情况修改
   
- 3. 终端进入 myBlogService 文件夹下，运行npm run start 启动（我已经把node_modules传上去了，所以不需要安装依赖） 
+ 3. 终端进入 myBlogService 文件夹下，运行npm  install 安装依赖
+ 4. 终端进入 myBlogService 文件夹下，运行npm run start 启动项目
+    如果出现：  
+     *  服务器在8000启动成功~
+     *  数据库连接成功
+     则表示启动成功
+    
 
 ## 前端：
-1. 终端进入 karrieBlog 文件夹下，运行npm run dev 启动（我已经把node_modules传上去了，所以不需要安装依赖） 
+1. 终端进入 karrieBlog 文件夹下，运行npm run dev 启动
