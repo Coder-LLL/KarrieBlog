@@ -1,6 +1,10 @@
 # KarrieBlog
 前端用vue2，后台用koa的博客
 
+* node版本： v14.19.0
+* vuecli版本：@vue/cli 5.0.1
+
+
 # 运行：
 
 ## 后台：
