@@ -1,0 +1,165 @@
+@import '../../assets//styles/global.scss';
+
+
+.comment-messageList {
+  .message-container {
+    margin-bottom: 30px;
+
+    .firstLevel {
+      display: flex;
+      margin: 10px 0 0 0;
+
+      .left-profile {
+        width: 60px;
+
+        svg {
+          width: 50px;
+          height: 50px;
+        }
+
+        .el-image {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+      }
+
+      .right-content {
+        .nick-name {
+          margin-bottom: 5px;
+
+          .name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-right: 5px;
+          }
+
+          .tip-time {
+            font-size: 12px;
+            color: #748594;
+          }
+
+          .replyTip {
+            display: inline-block;
+            cursor: pointer;
+            color: #9a9a9a;
+            font-size: 14px;
+          }
+        }
+
+
+
+        .message {
+          font-size: 16px;
+          color: #000000;
+          width: 95%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .twoLevel {
+      .twoLevelContainer {
+        .twoLevelItem {
+          display: flex;
+          padding-left: 50px;
+          margin-top: 10px;
+
+          .left-profile {
+            width: 60px;
+
+            svg {
+              width: 50px;
+              height: 50px;
+            }
+
+            .el-image {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+            }
+          }
+
+          .right-content {
+            .nick-name {
+              margin-bottom: 10px;
+              display: flex;
+
+              .nameOne {
+                font-size: 16px;
+                font-weight: 700;
+              }
+
+              .nameTwo {
+                font-size: 16px;
+                font-weight: 700;
+                margin-right: 10px;
+              }
+
+              .tip-time {
+                font-size: 12px;
+                color: #748594;
+              }
+            }
+
+            .message {
+              font-size: 16px;
+              color: #000000;
+              width: 95%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+  .replyInputDiv {
+    height: 60px;
+    margin-top: 20px;
+    padding: 10px 50px;
+    background-color: gray;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 50px;
+
+
+    .replyInputDivContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .replyInputAvatar {
+        svg {
+          width: 50px;
+          height: 50px;
+        }
+
+        .el-image {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+      }
+
+      .el-textarea {
+        width: 70%;
+        flex: 1;
+        margin: 0 10px 0px 5px;
+      }
+
+      .sendReplyBtn {
+        display: flex;
+        width: 196px;
+        height: 40px;
+      }
+    }
+
+  }
+
+
+}

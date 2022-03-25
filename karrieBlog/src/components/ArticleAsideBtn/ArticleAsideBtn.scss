@@ -1,0 +1,46 @@
+@import '../../assets/styles/global.scss';
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.articleAsideBtn {
+  position: fixed;
+  // left: 50%;
+  top: 190px;
+  transform: translateX(-270%);
+
+  // margin-left: -($mainWidth/2 + 50px);
+  // margin-left: -20px;
+  .feature-box {
+    @include flexCenter;
+    flex-direction: column;
+
+    .btn-box {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      margin-bottom: 15px;
+      color: $textColor4;
+      @include flexCenter;
+      @include boxShadow;
+
+      /deep/ .el-badge__content {
+        background-color: $textColor4;
+        color: #ffffff;
+        font-size: 8px;
+        height: 12px;
+        line-height: 12px;
+      }
+
+      &:hover {
+        color: $textColor3;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,92 @@
+@import '../../assets//styles//global.scss';
+
+.header-nav {
+
+  width: $mainWidth;
+  margin: 0 auto;
+  height: 61px;
+  padding: 0 100px;
+
+  .logo-box {
+    height: 60px;
+    float: left;
+    color: #00a7eb;
+    line-height: 60px;
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 22px;
+  }
+
+  /deep/ .el-menu {
+    float: left;
+    height: 60px;
+
+    .el-menu-item,
+    .el-submenu__title {
+      font-size: 16px !important;
+    }
+  }
+
+  .publishBlogDiv {
+    float: right;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    // align-content: center;
+    align-items: center;
+  }
+
+  .search,
+  .user-unlogin {
+    width: 69px;
+    height: 60px;
+    // background-color: pink;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+
+    margin-left: 20px;
+
+    .el-dropdown-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+
+      svg {
+        font-size: 50px;
+        font-weight: 700;
+      }
+    }
+
+  }
+
+  .user-login {
+    width: 69px;
+    height: 60px;
+    float: right;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .el-dropdown-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .el-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+
+
+  }
+}

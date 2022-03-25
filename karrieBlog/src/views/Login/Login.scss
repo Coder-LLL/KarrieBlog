@@ -1,0 +1,59 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('../../assets/bg.jpg');
+  background-size: 100vw 100vh;
+
+  .container {
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
+    display: flex;
+    border-radius: 10px;
+
+
+
+    /deep/ .el-tabs__nav {
+      padding: 0 20px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 20px;
+
+      .el-tabs__active-bar {
+        width: 80px !important;
+      }
+
+      #tab-login {
+        font-size: 20px;
+      }
+
+      #tab-register {
+        font-size: 20px;
+
+
+      }
+    }
+
+    /deep/ .el-tabs__content {
+      // background-color: pink;
+      width: 500px;
+      height: 330px;
+
+
+      .el-form {
+        padding: 0 30px 0 0;
+      }
+
+      .btns {
+        padding: 0 30px;
+        text-align: right;
+      }
+
+
+    }
+
+  }
+}

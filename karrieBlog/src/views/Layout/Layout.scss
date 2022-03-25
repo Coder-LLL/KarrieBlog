@@ -1,0 +1,32 @@
+@import '../../assets//styles//global.scss';
+
+$elHeaderHeight: 60px;
+$elFooterHeight: 60px;
+// 给一个最低的高度，防止footer跑上来
+$elMainHeight: 810px;
+
+.layout {
+  min-width: $mainWidth;
+  background-color: $layoutBg;
+
+  .el-header {
+    height: $elHeaderHeight;
+    background: #181818;
+    padding: 0;
+  }
+
+  .el-main {
+    width: $mainWidth;
+    margin: 0 auto;
+    min-height: $elMainHeight;
+    padding: 0;
+  }
+
+  .el-footer {
+    background: #181818;
+    color: #ffffff;
+    margin-top: 50px;
+    height: $elFooterHeight;
+    box-sizing: border-box;
+  }
+}

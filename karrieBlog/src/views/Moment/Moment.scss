@@ -1,0 +1,90 @@
+@import '../../assets//styles//global.scss';
+
+.moment {
+  margin-top: $marginTopMain;
+
+  // position: relative;
+  /deep/ #tab-home {
+    @include tabHome;
+  }
+
+  .el-tab-pane {
+    background-color: yellow;
+    @include clearfix;
+
+    // main {
+    // float: left;
+    width: 100%;
+    padding: 30px 30px 300px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    @include boxShadow;
+
+    header {
+      h2 {
+        margin: 20px 0;
+        color: $textColor3;
+      }
+
+      ul {
+        display: flex;
+        padding-left: 20px;
+
+        li {
+          margin-right: 20px;
+          color: $textColor;
+          font-size: 14px;
+        }
+
+        .author span {
+          cursor: pointer;
+
+          &:hover {
+            color: $textHoverColor3;
+          }
+        }
+      }
+
+      .tags-box {
+        margin: 20px 0;
+
+        .el-tag {
+          cursor: pointer;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    article {
+      text-align: justify;
+      font-size: 16px;
+      line-height: 1.8;
+
+      .momentImageList {
+        // background-color: pink;
+        margin: 20px 0;
+
+        .el-image {
+          width: 45%;
+          margin-left: 5%;
+          background-color: pink;
+        }
+      }
+    }
+
+    footer {
+      .extra-feature-btn-box {
+        margin: 20px 0;
+        text-align: center;
+
+        .el-button:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    // }
+
+
+  }
+}

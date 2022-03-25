@@ -1,0 +1,111 @@
+@import '../../assets/styles//global.scss';
+
+.setting {
+
+  // position: relative;
+  /deep/ #tab-home {
+    @include tabHome;
+  }
+
+  /deep/ .outerPane {
+    padding: 0 20px 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    min-height: 100vh;
+
+    .baseInfoDiv {
+
+      .nick-name {
+        .nameTip {
+          // background-color: yellow;
+          font-size: 18px;
+          font-weight: 800;
+          color: gray;
+        }
+
+        .name {
+          font-size: 18px;
+          font-weight: 800;
+        }
+      }
+
+      .userImg {
+        // background-color: yellow;
+        height: 200px;
+        display: flex;
+        align-items: center;
+
+        .avatarTip {
+          font-size: 18px;
+          font-weight: 800;
+          color: gray;
+        }
+
+        .el-image {
+          width: 150px;
+          height: 150px;
+          cursor: pointer;
+        }
+      }
+
+      .avatarUpload {
+        // background-color: pink;
+        padding-left: 50px;
+      }
+    }
+  }
+
+  /deep/ .innerPane {
+    padding: 10px 10px;
+
+    // background-color: yellow;
+    .el-card {
+      margin-top: 10px;
+
+      .info-box {
+
+        // margin-top: 10px;
+        .editAndDeleteBtnDiv {
+          text-align: right;
+        }
+
+        .left-img {
+          width: 30%;
+          height: 130px;
+          @include scaleImg;
+        }
+
+        h3 {
+          margin-bottom: 10px;
+          color: $textColor3;
+
+          &:hover {
+            color: $textHoverColor;
+            cursor: pointer;
+          }
+        }
+
+        .content {
+          padding-top: 20px;
+          margin-bottom: 20px;
+          color: $textColor2;
+          font-size: 14px;
+          @include textNumberLine(3);
+        }
+
+        ul {
+          li {
+            margin-right: 20px;
+            color: $textColor;
+            font-size: 14px;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+
+}

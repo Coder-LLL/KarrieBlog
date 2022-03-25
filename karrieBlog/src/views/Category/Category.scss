@@ -1,0 +1,106 @@
+@import '../../assets/styles//global.scss';
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  height: 700px;
+  padding: 20px 0px;
+
+
+  aside {
+    width: 17%;
+    height: 100%;
+    // background-color: pink;
+    overflow-y: auto;
+
+    span {
+      cursor: pointer;
+
+
+      &.active {
+        color: $textHoverColor2;
+      }
+
+      &:hover {
+        color: $textHoverColor2;
+      }
+    }
+  }
+
+  article {
+    width: 82%;
+    height: 100%;
+    // background-color: yellow;
+    overflow-y: auto;
+
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #d8d8d8;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background: transparent;
+    }
+
+    .noMoreTip {
+      // background-color: pink;  
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+      text-align: center;
+      color: #aeb2bf;
+    }
+
+    .el-card {
+      position: relative;
+
+      h4 {
+        cursor: pointer;
+        font-weight: 800;
+
+        &:hover {
+          color: $textHoverColor2;
+        }
+      }
+
+      p {
+        padding-top: 20px;
+        margin-bottom: 35px;
+        color: $textColor2;
+        font-size: 14px;
+        @include textNumberLine(3);
+      }
+
+      ul {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        padding-bottom: 10px;
+
+        li {
+          margin-right: 20px;
+          color: $textColor;
+          font-size: 14px;
+        }
+
+        .author span,
+        .type span {
+          cursor: pointer;
+
+          &:hover {
+            color: $textHoverColor3;
+          }
+        }
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,35 @@
+body,
+div,
+blockquote,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+
+}
+
+html,
+body {
+  background-color: #F6F6F6;
+}
+
+/* 重置fieldset（表单分组）、图片的边框为0*/
+ul li {
+  list-style: none
+}

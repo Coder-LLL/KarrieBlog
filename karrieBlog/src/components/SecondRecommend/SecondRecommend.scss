@@ -1,0 +1,35 @@
+@import "../../assets/styles/global.scss";
+
+.second-recommend {
+  height: $carouselHeight;
+  margin-bottom: 49px;
+
+  ul {
+    height: $carouselHeight;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    // background-color: yellow;
+
+    li {
+      height: $carouselHeight / 2 - 10;
+      position: relative;
+      cursor: pointer;
+
+      h2 {
+        @include textOneLine;
+        @include h2InImg;
+      }
+
+      .mask {
+        @include mask;
+
+        &:hover {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+}
