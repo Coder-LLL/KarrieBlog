@@ -1,4 +1,4 @@
-@import '../../assets//styles//global.scss';
+@import '../../assets//styles/global.scss';
 
 $elHeaderHeight: 60px;
 $elFooterHeight: 60px;
@@ -6,7 +6,7 @@ $elFooterHeight: 60px;
 $elMainHeight: 810px;
 
 .layout {
-  min-width: $mainWidth;
+  min-width: $LayoutWidth;
   background-color: $layoutBg;
 
   .el-header {

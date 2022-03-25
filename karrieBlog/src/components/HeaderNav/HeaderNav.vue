@@ -24,7 +24,9 @@
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item @click.native="goToLogin">登陆</el-dropdown-item>
+          <el-dropdown-item style="width: 30px" @click.native="goToLogin"
+            >登陆</el-dropdown-item
+          >
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -35,10 +37,13 @@
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item @click.native="showPersonalInformation">
+          <el-dropdown-item
+            style="width: 100px"
+            @click.native="showPersonalInformation"
+          >
             个人信息
           </el-dropdown-item>
-          <el-dropdown-item @click.native="loginOut">
+          <el-dropdown-item style="width: 100px" @click.native="loginOut">
             退出登录
           </el-dropdown-item>
         </el-dropdown-menu>
@@ -50,37 +55,14 @@
         >新建博客</el-button
       >
     </div>
-    <!-- <div v-else class="user-login">
-      <el-dropdown trigger="click">
-        <el-image :src="loginUserInfo.user_profile"></el-image>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item disabled icon="el-icon-edit"
-            >投稿
-          </el-dropdown-item>
 
-          <el-dropdown-item
-            divided
-            icon="el-icon-user"
-            @click.native="navigatorTo('/user')"
-            >我的主页
-          </el-dropdown-item>
-
-          <el-dropdown-item
-            divided
-            icon="el-icon-setting"
-            @click.native="navigatorTo('/user/settings')"
-            >设置
-          </el-dropdown-item>
-
-          <el-dropdown-item
-            divided
-            icon="el-icon-switch-button"
-            @click.native="logoutHandle"
-            >退出
-          </el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
-    </div> -->
+    <el-dialog title="提示" :visible.sync="dialogVisible" width="30%">
+      <span>您还未登录，点击确定前往登录</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="goToLogin">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -89,7 +71,7 @@ import { mapState } from "vuex";
 export default {
   name: "HeaderNav",
   data() {
-    return {};
+    return { dialogVisible: false };
   },
   mounted() {},
   methods: {
@@ -109,7 +91,15 @@ export default {
       this.$router.push("/setting");
     },
     publishBlogBtnClick() {
+      if (!this.$store.state.user.id) {
+        this.dialogVisible = true;
+        return;
+      }
       this.$router.push({ path: "/publishBlog" });
+    },
+    goToLogin() {
+      this.$router.push("/login");
+      this.dialogVisible = false;
     },
   },
   computed: {

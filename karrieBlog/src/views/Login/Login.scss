@@ -1,8 +1,8 @@
 .login {
-  width: 100vw;
+  min-width: 1300px;
   height: 100vh;
   overflow: hidden;
-  background-image: url('../../assets/bg.jpg');
+  background-image: url(../../assets/backgroundImg.jpg);
   background-size: 100vw 100vh;
 
   .container {

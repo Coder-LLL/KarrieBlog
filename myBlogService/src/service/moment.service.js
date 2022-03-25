@@ -53,6 +53,7 @@ class MomentService {
       (select count(*) from moment_label as ml where ml.moment_id =  m.id) as labelCount,
       (select count(*) from moment  ) as totalMomentsCount
     from moment as m left join user as u on m.user_id = u.id 
+    order by m.createAt desc
     limit ?,?;
      `
     const [result] = await connection.execute(statement, [offset, size])
